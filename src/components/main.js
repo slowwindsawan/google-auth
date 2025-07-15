@@ -44,6 +44,7 @@ export default function Main() {
     const currentUser = checkUserSignedIn();
     if (currentUser) {
       setUser(currentUser);
+      console.log("User already signed in:", currentUser);
     } else {
       const testPopup = window.open("", "", "width=100,height=100");
       if (!testPopup || testPopup.closed || typeof testPopup.closed === "undefined") {
@@ -73,6 +74,7 @@ export default function Main() {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
+      console.log("Login successful:", result);
       const user = result.user;
 
       const userData = {
