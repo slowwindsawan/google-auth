@@ -1,0 +1,10 @@
+{
+  "name": "react-server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
