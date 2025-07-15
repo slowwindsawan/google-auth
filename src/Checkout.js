@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Check, CreditCard, Lock } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 
 const CheckoutPage = () => {
   const queryParams = new URLSearchParams(window.location.search);
