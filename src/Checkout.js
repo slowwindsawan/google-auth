@@ -3,8 +3,7 @@ import { Check, CreditCard, Lock } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 const CheckoutPage = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(window.location.search);
   const email = queryParams.get('email');
 
   const [selectedPlan, setSelectedPlan] = useState('yearly');
