@@ -111,7 +111,7 @@ export default function Main() {
     <>
       {!user ? (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-sm w-full text-center opacity-0">
+          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-sm w-full text-center">
             <img style={{ height: "56px", width: "auto", margin: "auto" }} src={logo} />
             <h1 className="text-2xl font-semibold mb-2">Welcome to Klyra</h1>
             <p className="text-gray-600 mb-6">
