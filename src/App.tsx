@@ -1,18 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Main from './components/main';
 import './App.css';
+import Main from './components/main';
 import CheckoutPage from './Checkout';
 
 function App() {
+  // Extract query params from window.location
+  const queryParams = new URLSearchParams(window.location.search);
+  const showCheckout = queryParams.get("checkout") === "true";
+
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-        </Routes>
-      </Router>
+      {showCheckout ? <CheckoutPage /> : <Main />}
     </div>
   );
 }
